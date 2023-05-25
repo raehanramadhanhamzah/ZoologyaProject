@@ -48,7 +48,7 @@ class  showScene{
        
         vbox1.setAlignment(Pos.TOP_CENTER);
         stage.setTitle("Kalkulator Sederhana");
-        Scene scene1 = new Scene(vbox1, 360, 570, null);
+        Scene scene1 = new Scene(vbox1, 360, 650);
         
         scene1.getStylesheets().add(getClass().getResource("/styles/style.css").toExternalForm());
         stage.setScene(scene1);
@@ -95,7 +95,7 @@ class  showScene{
         VBox vbox1 = new VBox(l1,buttonKH,buttonMG,buttonHome);
         vbox1.setId("latarScene2");
         vbox1.setAlignment(Pos.TOP_CENTER);
-        Scene scene2 = new Scene(vbox1, 360, 570, null);
+        Scene scene2 = new Scene(vbox1, 360, 650, null);
         scene2.getStylesheets().add(getClass().getResource("/styles/style.css").toExternalForm());
         stage.setScene(scene2);
     

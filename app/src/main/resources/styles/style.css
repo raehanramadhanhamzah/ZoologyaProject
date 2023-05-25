@@ -7,15 +7,16 @@
     -fx-padding: 20px;
     /* -fx-font-weight:bold; */
     -fx-text-fill:rgb(42, 104, 52);
+    -fx-translate-y:25px;
 }
 #Logo{
     -fx-padding:0px 0px 30px 0px;
-    
+    -fx-translate-y:50px;
 }
 #labelMasuk{
     /* -fx-translate-x : -150px; */
     -fx-font-size:15px;
-    -fx-translate-y:38px;
+    -fx-translate-y:115px;
     -fx-font-family:'Berlin Sans FB';
     
 }
@@ -25,7 +26,7 @@
     -fx-max-width: 250px;
     -fx-pref-height: 35px;
     /* -fx-translate-x: -40px; */
-    -fx-translate-y:50px;
+    -fx-translate-y:120px;
     
 }
 
@@ -37,7 +38,7 @@
     -fx-padding:15px 90px 15px 90px;
     -fx-cursor:hand;
     /* -fx-translate-x: -150px; */
-    -fx-translate-y: 95px;
+    -fx-translate-y: 160px;
     -fx-font-family:'Berlin Sans FB';
 }
 #tombolMasuk:hover{
@@ -70,11 +71,11 @@
     -fx-label-padding:0px 0px 5px 0px;
     -fx-border-width:0px 0px 5px 0px;
     -fx-border-color:rgb(119, 180, 119);
-    -fx-translate-y:10px;
+    -fx-translate-y:45px;
 }
 #tombolHome{
     /* -fx-translate-x:-142px; */
-    -fx-translate-y:205px;
+    -fx-translate-y:270px;
     -fx-border-radius:10px;
     -fx-background-color:white;
     -fx-background-radius:12px 12px 15px 12px;
@@ -86,7 +87,7 @@
     
     -fx-padding:15px 65px 15px 65px;
     -fx-font-size: 20px;
-    -fx-translate-y:100px;
+    -fx-translate-y:150px;
     -fx-background-radius:10px;
     -fx-background-color:rgb(84, 207, 84);
     -fx-text-fill:white;
@@ -110,33 +111,12 @@
     
     -fx-padding:15px 38px 15px 38px;
     -fx-font-size: 20px;
-    -fx-translate-y:150px;
+    -fx-translate-y:200px;
     -fx-background-radius:10px;
 }
 #tombolMinigames:hover{
     -fx-background-color:rgb(240, 240, 240);
     -fx-text-fill:rgb(84, 207, 84);
     
-    /* -fx-padding:15px 35px 15px 35px;
-    -fx-font-size: 20px;
-    -fx-translate-y:200px;
-    -fx-background-radius:10px; */
-}
-/* -----------------------
-/* #latarScene2{
-    -fx-background-color: rgb(94, 93, 93);
 }
 
-#buttonClear{
-    -fx-background-color:rgb(165, 164, 164);
-    -fx-font-size:20px;
-    -fx-background-radius:10px;
-    -fx-font-weight:bold;
-    -fx-font-family:Courier,sans-serif;
-    -fx-translate-x:-75px;
-    -fx-translate-y:47px;
-    -fx-pref-width: 130 px;
-    -fx-max-width: 150px;
-    -fx-pref-height:60px;
-    -fx-cursor:hand;
-} */
