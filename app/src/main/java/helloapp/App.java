@@ -104,37 +104,37 @@ class  showScene{
     }
 
     
-    public void showScene3() {
+    // public void showScene3() {
         
         
-        Button buttonKH = new Button("Kenali Hewan");
-        buttonKH.setId("tombolKenali");
-        Image imgZoo = new Image("gambarZoo.png");
-        ImageView gambarZoo = new ImageView(imgZoo);
-        gambarZoo.setFitWidth(55);
-        gambarZoo.setFitHeight(55);
-        gambarZoo.setTranslateX(-30);
-        buttonKH.setGraphic(gambarZoo);
+    //     Button buttonKH = new Button("Kenali Hewan");
+    //     buttonKH.setId("tombolKenali");
+    //     Image imgZoo = new Image("gambarZoo.png");
+    //     ImageView gambarZoo = new ImageView(imgZoo);
+    //     gambarZoo.setFitWidth(55);
+    //     gambarZoo.setFitHeight(55);
+    //     gambarZoo.setTranslateX(-30);
+    //     buttonKH.setGraphic(gambarZoo);
         
         
-        Button buttonMG = new Button("Bermain Minigames");
-        buttonMG.setId("tombolMinigames");
-        Image imgJoystick = new Image("iconJoystick.png");
-        ImageView gambarJotstick = new ImageView(imgJoystick);
-        gambarJotstick.setFitWidth(55);
-        gambarJotstick.setFitHeight(55);
-        gambarJotstick.setTranslateX(-20);
-        buttonMG.setGraphic(gambarJotstick);
+    //     Button buttonMG = new Button("Bermain Minigames");
+    //     buttonMG.setId("tombolMinigames");
+    //     Image imgJoystick = new Image("iconJoystick.png");
+    //     ImageView gambarJotstick = new ImageView(imgJoystick);
+    //     gambarJotstick.setFitWidth(55);
+    //     gambarJotstick.setFitHeight(55);
+    //     gambarJotstick.setTranslateX(-20);
+    //     buttonMG.setGraphic(gambarJotstick);
        
-        VBox vbox1 = new VBox(l1,buttonKH,buttonMG,buttonChicken);
-        vbox1.setId("latarScene2");
-        vbox1.setAlignment(Pos.TOP_CENTER);
-        Scene scene2 = new Scene(vbox1, 360, 570, null);
-        scene2.getStylesheets().add(getClass().getResource("/styles/style.css").toExternalForm());
-        stage.setScene(scene2);
+    //     // VBox vbox1 = new VBox(l1,buttonKH,buttonMG,buttonChicken);
+    //     vbox1.setId("latarScene2");
+    //     vbox1.setAlignment(Pos.TOP_CENTER);
+    //     Scene scene2 = new Scene(vbox1, 360, 570, null);
+    //     scene2.getStylesheets().add(getClass().getResource("/styles/style.css").toExternalForm());
+    //     stage.setScene(scene2);
     
-        stage.show();
-    }
+    //     stage.show();
+    // }
 }
 
 public class App extends Application {
