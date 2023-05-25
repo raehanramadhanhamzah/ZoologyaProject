@@ -1,0 +1,142 @@
+/* .tf{
+    -fx-pref-width: 10px;
+} */
+#namaApp{
+    -fx-font-family:'Copperplate Gothic Bold';
+    -fx-font-size: 40px;
+    -fx-padding: 20px;
+    /* -fx-font-weight:bold; */
+    -fx-text-fill:rgb(42, 104, 52);
+}
+#Logo{
+    -fx-padding:0px 0px 30px 0px;
+    
+}
+#labelMasuk{
+    /* -fx-translate-x : -150px; */
+    -fx-font-size:15px;
+    -fx-translate-y:38px;
+    -fx-font-family:'Berlin Sans FB';
+    
+}
+#inputNama{
+    -fx-background-radius:10px;
+    -fx-pref-width: 90px ;
+    -fx-max-width: 250px;
+    -fx-pref-height: 35px;
+    /* -fx-translate-x: -40px; */
+    -fx-translate-y:50px;
+    
+}
+
+#tombolMasuk{
+    -fx-font-size: 15px;
+    -fx-font-weight: 650;
+    -fx-background-radius: 50px;
+    -fx-background-color: rgb(94, 202, 94);
+    -fx-padding:15px 90px 15px 90px;
+    -fx-cursor:hand;
+    /* -fx-translate-x: -150px; */
+    -fx-translate-y: 95px;
+    -fx-font-family:'Berlin Sans FB';
+}
+#tombolMasuk:hover{
+    
+    -fx-font-family:'Berlin Sans FB';
+    -fx-padding:15px 90px 15px 90px;
+    -fx-background-color:rgb(240, 240, 240);
+    -fx-text-fill:rgb(84, 207, 84);
+    -fx-border-color:green;
+    -fx-border-width:3px;
+    -fx-border-radius:50px;
+}
+
+#latarScene1{
+    -fx-background-color: #aff1af;
+    -fx-background-image:url('https://i.pinimg.com/564x/67/15/2c/67152cf81795d9bd2a450c3f3c99046a.jpg');
+    /* background-color:#90ee90 */
+}
+/* MASUK SCENE 2 */
+#latarScene2{
+    -fx-background-color: #aff1af;
+    -fx-background-image:url('https://i.pinimg.com/564x/2c/5c/b0/2c5cb07d7784105701e56d0a5097374b.jpg');
+    /* background-color:#90ee90 */
+}
+
+
+#pilihanMenu{
+    -fx-font-size: 20px;
+    -fx-font-weight:bold;
+    -fx-label-padding:0px 0px 5px 0px;
+    -fx-border-width:0px 0px 5px 0px;
+    -fx-border-color:rgb(119, 180, 119);
+    -fx-translate-y:10px;
+}
+#tombolHome{
+    /* -fx-translate-x:-142px; */
+    -fx-translate-y:205px;
+    -fx-border-radius:10px;
+    -fx-background-color:white;
+    -fx-background-radius:10px;
+    -fx-border-color:rgb(84, 207, 84);
+    -fx-border-width:3px;
+    -fx-cursor:hand;
+}
+#tombolKenali{
+    
+    -fx-padding:15px 65px 15px 65px;
+    -fx-font-size: 20px;
+    -fx-translate-y:100px;
+    -fx-background-radius:10px;
+    -fx-background-color:rgb(84, 207, 84);
+    -fx-text-fill:white;
+    -fx-font-weight:500;
+    /* font-weight: ; */
+    -fx-cursor:hand;
+    
+}
+#tombolKenali:hover{
+    
+    
+    -fx-background-color:rgb(240, 240, 240);
+    -fx-text-fill:rgb(84, 207, 84);
+    -fx-cursor:hand;
+}
+#tombolMinigames{
+    -fx-background-color:rgb(84, 207, 84);
+    -fx-text-fill:white;
+    -fx-font-weight:500;
+    -fx-cursor:hand;
+    
+    -fx-padding:15px 38px 15px 38px;
+    -fx-font-size: 20px;
+    -fx-translate-y:150px;
+    -fx-background-radius:10px;
+}
+#tombolMinigames:hover{
+    -fx-background-color:rgb(240, 240, 240);
+    -fx-text-fill:rgb(84, 207, 84);
+    
+    /* -fx-padding:15px 35px 15px 35px;
+    -fx-font-size: 20px;
+    -fx-translate-y:200px;
+    -fx-background-radius:10px; */
+}
+/* -----------------------
+/* #latarScene2{
+    -fx-background-color: rgb(94, 93, 93);
+}
+
+#buttonClear{
+    -fx-background-color:rgb(165, 164, 164);
+    -fx-font-size:20px;
+    -fx-background-radius:10px;
+    -fx-font-weight:bold;
+    -fx-font-family:Courier,sans-serif;
+    -fx-translate-x:-75px;
+    -fx-translate-y:47px;
+    -fx-pref-width: 130 px;
+    -fx-max-width: 150px;
+    -fx-pref-height:60px;
+    -fx-cursor:hand;
+} */
