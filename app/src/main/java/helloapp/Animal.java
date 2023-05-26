@@ -1,7 +1,5 @@
 package helloapp;
 
 abstract public class Animal {
-    public void SceneAyam() {
-        
-    }
+    abstract public void scene();
 }

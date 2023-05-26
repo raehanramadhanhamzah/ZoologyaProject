@@ -1,6 +1,4 @@
-/* .tf{
-    -fx-pref-width: 10px;
-} */
+
 #namaApp{
     -fx-font-family:'Copperplate Gothic Bold';
     -fx-font-size: 40px;
@@ -54,14 +52,12 @@
 
 #latarScene1{
     -fx-background-color: #aff1af;
-    -fx-background-image:url('https://i.pinimg.com/564x/2c/5c/b0/2c5cb07d7784105701e56d0a5097374b.jpg');
-    /* background-color:#90ee90 */
+    -fx-background-image:url('/app/src/main/resources/backgroundAPP.jpg');
 }
 /* MASUK SCENE 2 */
 #latarScene2{
     -fx-background-color: #aff1af;
-    -fx-background-image:url('https://i.pinimg.com/564x/2c/5c/b0/2c5cb07d7784105701e56d0a5097374b.jpg');
-    /* background-color:#90ee90 */
+    -fx-background-image:url('/app/src/main/resources/backgroundAPP.jpg');
 }
 
 
@@ -120,3 +116,82 @@
     
 }
 
+/* MASUK SCENE 3 */
+#latarScene3{
+    /* -fx-background-color: #aff1af; */
+    -fx-background-image:url('/app/src/main/resources/backgroundAPP.jpg');
+    /* background-color:#90ee90 */
+}
+
+
+#namaHewan{
+    -fx-font-size: 20px;
+    -fx-font-weight:bold;
+    -fx-label-padding:0px 0px 5px 0px;
+    -fx-border-width:0px 0px 5px 0px;
+    -fx-border-color:rgb(119, 180, 119);
+    -fx-translate-y:20px;
+}
+/* #tombolHome{
+    -fx-translate-x:-142px;
+    -fx-translate-y:270px;
+    -fx-border-radius:10px;
+    -fx-background-color:white;
+    -fx-background-radius:12px 12px 15px 12px;
+    -fx-border-color:rgb(19, 131, 19);
+    -fx-border-width:5px;
+    -fx-cursor:hand;
+} */
+#buttonAnjing{
+    
+    -fx-padding:15px 65px 15px 65px;
+    -fx-font-size: 20px;
+    -fx-translate-y:50px;
+    -fx-background-radius:10px;
+    -fx-background-color:rgb(84, 207, 84);
+    -fx-text-fill:white;
+    -fx-font-weight:500;
+    /* font-weight: ; */
+    -fx-cursor:hand;
+    
+}
+#buttonSapi{
+    
+    -fx-padding:15px 75px 15px 75px;
+    -fx-font-size: 20px;
+    -fx-translate-y:80px;
+    -fx-background-radius:10px;
+    -fx-background-color:rgb(84, 207, 84);
+    -fx-text-fill:white;
+    -fx-font-weight:500;
+    /* font-weight: ; */
+    -fx-cursor:hand;
+    
+}
+#buttonKucing{
+    
+    -fx-padding:15px 65px 15px 65px;
+    -fx-font-size: 20px;
+    -fx-translate-y:110px;
+    -fx-background-radius:10px;
+    -fx-background-color:rgb(84, 207, 84);
+    -fx-text-fill:white;
+    -fx-font-weight:500;
+    /* font-weight: ; */
+    -fx-cursor:hand;
+    
+}
+
+#buttonAyam{
+    
+    -fx-padding:15px 70px 15px 70px;
+    -fx-font-size: 20px;
+    -fx-translate-y:140px;
+    -fx-background-radius:10px;
+    -fx-background-color:rgb(84, 207, 84);
+    -fx-text-fill:white;
+    -fx-font-weight:500;
+    /* font-weight: ; */
+    -fx-cursor:hand;
+    
+}
