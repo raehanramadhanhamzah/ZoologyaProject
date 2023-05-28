@@ -1,35 +1,53 @@
 package helloapp;
 
-import javafx.scene.control.Button;
+import java.io.File;
+
+import javafx.geometry.Pos;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.scene.text.Text;
 
 public class Kucing extends Animal{
-    // public Kucing(Button tombolHewan, Text textDeskripsi, Button tombolSuara, Image img, ImageView imgView) {
-    //     super(tombolHewan, textDeskripsi, tombolSuara, img, imgView);
-    // }
+    // Encapsulasi
+    private String path; 
+    private Image showImg;
+    private MediaPlayer mediaplayer;
+    private Media media;
+    private String fileNameSuara;
+    private ImageView imgview;
+    public String getFileNameSuara() {
+        return fileNameSuara;
+    }
 
+    public void setFileNameSuara(String fileNameSuara) {
+        this.fileNameSuara = fileNameSuara;
+    }
     @Override
     public  Text deskripsi() {
-        Text textDesc = new Text("Kucing, yang juga dikenal dengan nama ilmiah Canis lupus familiaris, adalah hewan peliharaan yang paling umum dan terkenal di dunia. Mereka adalah anggota keluarga Canidae dan merupakan keturunan dari serigala. Kucing telah hidup berdampingan dengan manusia selama ribuan tahun dan telah mengalami proses domestikasi yang intensif.\nKucing adalah hewan yang bervariasi dalam ukuran, bentuk, warna, dan karakteristik fisiknya. Ada ratusan ras Kucing yang diakui secara resmi, mulai dari yang sangat kecil seperti Chihuahua hingga yang sangat besar seperti Great Dane. Setiap ras memiliki ciri khasnya sendiri dalam hal penampilan, termasuk bentuk tubuh, bulu, bentuk kepala, dan ukuran telinga.");
+        Text textDesc = new Text("Kucing adalah hewan peliharaan yang populer di seluruh dunia. Mereka memiliki tubuh kecil hingga sedang, dengan bulu yang beragam warna dan pola. Kucing dikenal dengan keanggunan dan kelembutan mereka. Mereka adalah hewan karnivora yang secara alami memakan daging. Kucing memiliki indera pendengaran yang sangat tajam dan kemampuan melompat yang luar biasa. Mereka adalah hewan yang mandiri namun juga bisa menjadi teman setia bagi pemiliknya.");
+        textDesc.setWrappingWidth(300);
+        textDesc.setId("descKucing");
         return textDesc;
         
     }
 
     @Override
     public void suara() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'suara'");
+        path = "C:/Zoologya/app/src/main/resources/suaraKucing.mp3";
+         media = new Media(new File(path).toURI().toString());
+         mediaplayer = new MediaPlayer(media);
+        mediaplayer.play();
     }
 
     @Override
     public ImageView showImg() {
-        Image showImg = new Image("imgKucing.jpg");
-        ImageView imgview = new ImageView(showImg);
-        imgview.setFitWidth(150);
-        imgview.setFitHeight(150);
+        showImg = new Image("imgKucing.jpg");
+        imgview = new ImageView(showImg);
+        imgview.setFitHeight(200);
+        imgview.setFitWidth(300);
         return imgview;
     }
-    
+
 }

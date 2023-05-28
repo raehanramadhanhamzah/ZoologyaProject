@@ -2,7 +2,6 @@ package helloapp;
 
 
 
-import java.io.File;
 
 import javafx.application.Application;
 import javafx.geometry.Pos;
@@ -12,18 +11,13 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundImage;
 import javafx.scene.layout.BackgroundPosition;
 import javafx.scene.layout.BackgroundRepeat;
 import javafx.scene.layout.BackgroundSize;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
-import javafx.scene.media.Media;
-import javafx.scene.media.MediaPlayer;
-import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
@@ -56,7 +50,7 @@ class  showScene{
         l1.setFont(null);
         l1.setId("namaApp");
         
-        Label l2 = new Label("Halo, Nama Kamu Siapa?");
+        Label l2 = new Label("Masukkan Nama Anda ");
         l2.setId("labelMasuk");
         Button buttonLogin = new Button("Masuk");
         buttonLogin.setId("tombolMasuk");
@@ -117,13 +111,8 @@ class  showScene{
         gambarJotstick.setTranslateX(-20);
         buttonMG.setGraphic(gambarJotstick);
         
-        Button buttonHome = new Button();
-        buttonHome.setId("tombolHome2");
-        Image imgButtonHome = new Image("buttonHome2.png");
-        ImageView gambarButtonHome = new ImageView(imgButtonHome);
-        gambarButtonHome.setFitWidth(30);
-        gambarButtonHome.setFitHeight(30);
-        buttonHome.setGraphic(gambarButtonHome);
+        Button buttonHome = new Button("Kembali");
+        buttonHome.setId("tombolBack");
         buttonHome.setOnAction(action -> {
             showScene show = new showScene(stage);
             show.showHomeScene();
@@ -169,11 +158,20 @@ class  showScene{
         } );
         Button kucingButton = objKucing.TombolHewan("Kucing");
         kucingButton.setId("buttonKucing");
+        kucingButton.setOnAction(action -> {
+            showSceneKucing();
+        });
         Button sapiButton = objSapi.TombolHewan("Sapi");
         sapiButton.setId("buttonSapi");
+        sapiButton.setOnAction(action -> {
+            showSceneSapi();
+        });
         Button ayamButton = objAyam.TombolHewan("Ayam");
         ayamButton.setId("buttonAyam");
-        
+        ayamButton.setOnAction(action -> {
+            showSceneAyam();
+        });
+
         Image anjingImage = objAnjing.image("Anjing.png");
         Image kucingImage = objKucing.image("Kucing.png");
         Image sapiImage = objSapi.image("Sapi.png");
@@ -203,16 +201,11 @@ class  showScene{
         imgViewAyam.setTranslateX(-20);
         ayamButton.setGraphic(imgViewAyam);
 
-        Button buttonHome = new Button();
-        buttonHome.setId("tombolHome3");
-        Image imgButtonHome = new Image("buttonHome2.png");
-        ImageView gambarButtonHome = new ImageView(imgButtonHome);
-        gambarButtonHome.setFitWidth(30);
-        gambarButtonHome.setFitHeight(30);
-        buttonHome.setGraphic(gambarButtonHome);
+        Button buttonHome = new Button("Kembali");
+        buttonHome.setId("tombolBack2");
         buttonHome.setOnAction(action -> {
             showScene show = new showScene(stage);
-            show.showHomeScene();
+            show.showMenuScene();
         });
 
         VBox vbox = new VBox(l1,anjingButton,sapiButton,kucingButton,ayamButton,buttonHome);
@@ -237,47 +230,186 @@ class  showScene{
         );
         Background bg = new Background(bgIMG);
         
+        Anjing objAnjing = new Anjing();
+        
         Label l1 = new Label("ANJING");
         l1.setId("judulAnjing");
-        Image showImage = new Image("imgAnjing.jpg");
-        ImageView imgview = new ImageView(showImage);
-        // imgview.setFitWidth(200);
-        // imgview.setFitHeight(200);
-        imgview.setId("showAnjingImage");
+        ImageView gambarAnjing = objAnjing.showImg();
+        gambarAnjing.setId("showAnjingImage");
         
-        Anjing objAnjing = new Anjing();
+        
         Text desc = objAnjing.deskripsi();
         desc.setTextAlignment(TextAlignment.JUSTIFY);
-        desc.setWrappingWidth(300);
-        desc.setId("descAnjing");
         
         Button suaraAnjing = objAnjing.TombolSuara("Suara Anjing");
         suaraAnjing.setId("tombolSuaraAnjing");
         suaraAnjing.setOnAction(action ->{
-            String path = "C:/Zoologya/app/src/main/resources/suaraAnjing.mp3";
-            Media media = new Media(new File(path).toURI().toString());
-            MediaPlayer mediaplayer = new MediaPlayer(media);
-            mediaplayer.play();
+            objAnjing.suara();
         } );
-        Button buttonHome = new Button();
-        buttonHome.setId("tombolHomeAnjing");
-        Image imgButtonHome = new Image("buttonHome2.png");
-        ImageView gambarButtonHome = new ImageView(imgButtonHome);
-        gambarButtonHome.setFitWidth(30);
-        gambarButtonHome.setFitHeight(30);
-        buttonHome.setGraphic(gambarButtonHome);
-        buttonHome.setOnAction(action -> {
+        Button buttonBack = new Button("Kembali");
+        buttonBack.setId("tombolBackAnjing");
+        buttonBack.setOnAction(action -> {
             showScene show = new showScene(stage);
-            show.showHomeScene();
+            show.showAnimalList();
         });
-        VBox vbox = new VBox(l1,imgview,desc,suaraAnjing);
+        VBox vbox = new VBox(l1,gambarAnjing,desc,suaraAnjing);
         vbox.setId("latarSceneAnjing");
         vbox.setAlignment(Pos.TOP_CENTER);
         HBox hbox = new HBox(10);
         hbox.setAlignment(Pos.CENTER);
-        hbox.setSpacing(60);
+        hbox.setSpacing(30);
         hbox.setTranslateY(80);
-        hbox.getChildren().addAll(buttonHome,suaraAnjing);
+        hbox.getChildren().addAll(buttonBack,suaraAnjing);
+        VBox root = new VBox(vbox,hbox);
+        root.setBackground(bg);
+        Scene scene2 = new Scene(root, 360, 650);
+        scene2.getStylesheets().add(getClass().getResource("/styles/style.css").toExternalForm());
+        stage.setScene(scene2);
+    
+        stage.show();
+    }
+    public void showSceneSapi() {
+        Image img = new Image("backgroundAPP.jpg");
+        BackgroundImage bgIMG = new BackgroundImage(
+            img,
+            BackgroundRepeat.NO_REPEAT,
+            BackgroundRepeat.NO_REPEAT,
+            BackgroundPosition.CENTER,
+            new BackgroundSize(100, 100, true, true, true, true)
+        );
+        Background bg = new Background(bgIMG);
+        
+        Sapi objSapi = new Sapi();
+        
+        Label l1 = new Label("SAPI");
+        l1.setId("judulSapi");
+        ImageView gambarSapi = objSapi.showImg();
+        gambarSapi.setId("showSapiImage");
+        
+        
+        Text desc = objSapi.deskripsi();
+        desc.setTextAlignment(TextAlignment.JUSTIFY);
+        
+        Button suaraSapi = objSapi.TombolSuara("Suara Sapi");
+        suaraSapi.setId("tombolSuaraSapi");
+        suaraSapi.setOnAction(action ->{
+            objSapi.suara();
+        } );
+        Button buttonBack = new Button("Kembali");
+        buttonBack.setId("tombolBackSapi");
+        
+        buttonBack.setOnAction(action -> {
+            showScene show = new showScene(stage);
+            show.showAnimalList();
+        });
+        VBox vbox = new VBox(l1,gambarSapi,desc,suaraSapi);
+        vbox.setId("latarSceneSapi");
+        vbox.setAlignment(Pos.TOP_CENTER);
+        HBox hbox = new HBox(10);
+        hbox.setAlignment(Pos.CENTER);
+        hbox.setSpacing(30);
+        hbox.setTranslateY(115);
+        hbox.getChildren().addAll(buttonBack,suaraSapi);
+        VBox root = new VBox(vbox,hbox);
+        root.setBackground(bg);
+        Scene scene2 = new Scene(root, 360, 650);
+        scene2.getStylesheets().add(getClass().getResource("/styles/style.css").toExternalForm());
+        stage.setScene(scene2);
+    
+        stage.show();
+    }
+    public void showSceneKucing() {
+        Image img = new Image("backgroundAPP.jpg");
+        BackgroundImage bgIMG = new BackgroundImage(
+            img,
+            BackgroundRepeat.NO_REPEAT,
+            BackgroundRepeat.NO_REPEAT,
+            BackgroundPosition.CENTER,
+            new BackgroundSize(100, 100, true, true, true, true)
+        );
+        Background bg = new Background(bgIMG);
+        
+        Kucing objKucing = new Kucing();
+        
+        Label l1 = new Label("KUCING");
+        l1.setId("judulKucing");
+        ImageView gambarKucing = objKucing.showImg();
+        gambarKucing.setId("showKucingImage");
+        
+        
+        Text desc = objKucing.deskripsi();
+        desc.setTextAlignment(TextAlignment.JUSTIFY);
+        
+        Button suaraKucing = objKucing.TombolSuara("Suara Kucing");
+        suaraKucing.setId("tombolSuaraKucing");
+        suaraKucing.setOnAction(action ->{
+            objKucing.suara();
+        } );
+        Button buttonBack = new Button("Kembali");
+        buttonBack.setId("tombolBackKucing");
+        
+        buttonBack.setOnAction(action -> {
+            showScene show = new showScene(stage);
+            show.showAnimalList();
+        });
+        VBox vbox = new VBox(l1,gambarKucing,desc,suaraKucing);
+        vbox.setId("latarSceneKucing");
+        vbox.setAlignment(Pos.TOP_CENTER);
+        HBox hbox = new HBox(10);
+        hbox.setAlignment(Pos.CENTER);
+        hbox.setSpacing(30);
+        hbox.setTranslateY(110);
+        hbox.getChildren().addAll(buttonBack,suaraKucing);
+        VBox root = new VBox(vbox,hbox);
+        root.setBackground(bg);
+        Scene scene2 = new Scene(root, 360, 650);
+        scene2.getStylesheets().add(getClass().getResource("/styles/style.css").toExternalForm());
+        stage.setScene(scene2);
+    
+        stage.show();
+    }
+    public void showSceneAyam() {
+        Image img = new Image("backgroundAPP.jpg");
+        BackgroundImage bgIMG = new BackgroundImage(
+            img,
+            BackgroundRepeat.NO_REPEAT,
+            BackgroundRepeat.NO_REPEAT,
+            BackgroundPosition.CENTER,
+            new BackgroundSize(100, 100, true, true, true, true)
+        );
+        Background bg = new Background(bgIMG);
+        
+        Ayam objAyam = new Ayam();
+        
+        Label l1 = new Label("Ayam");
+        l1.setId("judulAyam");
+        ImageView gambarAyam = objAyam.showImg();
+        gambarAyam.setId("showAyamImage");
+        
+        
+        Text desc = objAyam.deskripsi();
+        desc.setTextAlignment(TextAlignment.JUSTIFY);
+        
+        Button suaraAyam = objAyam.TombolSuara("Suara Ayam");
+        suaraAyam.setId("tombolSuaraAyam");
+        suaraAyam.setOnAction(action ->{
+            objAyam.suara();
+        } );
+        Button buttonBack = new Button("Kembali");
+        buttonBack.setId("tombolBackAyam");
+        
+        buttonBack.setOnAction(action -> {
+            showScene show = new showScene(stage);
+            show.showAnimalList();
+        });
+        VBox vbox = new VBox(l1,gambarAyam,desc,suaraAyam);
+        vbox.setId("latarSceneAyam");
+        vbox.setAlignment(Pos.TOP_CENTER);
+        HBox hbox = new HBox(10);
+        hbox.setAlignment(Pos.CENTER);
+        hbox.setSpacing(30);
+        hbox.setTranslateY(120);
+        hbox.getChildren().addAll(buttonBack,suaraAyam);
         VBox root = new VBox(vbox,hbox);
         root.setBackground(bg);
         Scene scene2 = new Scene(root, 360, 650);

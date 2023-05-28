@@ -1,35 +1,51 @@
 package helloapp;
 
-import javafx.scene.control.Button;
+import java.io.File;
+
+import javafx.geometry.Pos;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.scene.text.Text;
 
 public class Sapi extends Animal{
-    // public Sapi(Button tombolHewan, Text textDeskripsi, Button tombolSuara, Image img, ImageView imgView) {
-    //     super(tombolHewan, textDeskripsi, tombolSuara, img, imgView);
-    // }
+    private String path; 
+    private MediaPlayer mediaplayer;
+    private Media media;
+    // Encapsulasi
+    private String fileNameSuara;
+    public String getFileNameSuara() {
+        return fileNameSuara;
+    }
 
+    public void setFileNameSuara(String fileNameSuara) {
+        this.fileNameSuara = fileNameSuara;
+    }
     @Override
     public  Text deskripsi() {
-        Text textDesc = new Text("Sapi, yang juga dikenal dengan nama ilmiah Canis lupus familiaris, adalah hewan peliharaan yang paling umum dan terkenal di dunia. Mereka adalah anggota keluarga Canidae dan merupakan keturunan dari serigala. Sapi telah hidup berdampingan dengan manusia selama ribuan tahun dan telah mengalami proses domestikasi yang intensif.\nSapi adalah hewan yang bervariasi dalam ukuran, bentuk, warna, dan karakteristik fisiknya. Ada ratusan ras Sapi yang diakui secara resmi, mulai dari yang sangat kecil seperti Chihuahua hingga yang sangat besar seperti Great Dane. Setiap ras memiliki ciri khasnya sendiri dalam hal penampilan, termasuk bentuk tubuh, bulu, bentuk kepala, dan ukuran telinga.");
+        Text textDesc = new Text("Sapi adalah hewan ternak penting dengan tubuh besar, bulu cokelat atau hitam, dan tanduk pada kepala. Mereka adalah herbivora yang memakan tumbuhan dan memberikan manfaat berupa daging, susu, dan kulit. Selain itu, sapi juga memiliki nilai budaya dan digunakan dalam pertanian dan transportasi tradisional. Perawatan yang baik sangat penting untuk menjaga kesehatan dan produktivitas sapi, termasuk pemenuhan nutrisi yang tepat, perawatan kesehatan yang rutin, dan lingkungan yang aman dan nyaman");
+        textDesc.setWrappingWidth(300);
+        textDesc.setId("descSapi");
         return textDesc;
         
     }
 
     @Override
     public void suara() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'suara'");
+        String path = "C:/Zoologya/app/src/main/resources/suaraSapi.mp3";
+        Media media = new Media(new File(path).toURI().toString());
+        MediaPlayer mediaplayer = new MediaPlayer(media);
+        mediaplayer.play();
     }
 
     @Override
     public ImageView showImg() {
         Image showImg = new Image("imgSapi.jpg");
         ImageView imgview = new ImageView(showImg);
-        imgview.setFitWidth(150);
-        imgview.setFitHeight(150);
+        imgview.setFitHeight(200);
+        imgview.setFitWidth(300);
         return imgview;
     }
-    
+
 }

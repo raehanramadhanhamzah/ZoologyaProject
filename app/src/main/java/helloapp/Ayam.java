@@ -1,35 +1,53 @@
 package helloapp;
 
-import javafx.scene.control.Button;
+import java.io.File;
+
+import javafx.geometry.Pos;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.scene.text.Text;
 
 public class Ayam extends Animal{
-    // public Ayam(Button tombolHewan, Text textDeskripsi, Button tombolSuara, Image img, ImageView imgView) {
-    //     super(tombolHewan, textDeskripsi, tombolSuara, img, imgView);
-    // }
+    // Encapsulasi
+    private String path; 
+    private Image showImg;
+    private MediaPlayer mediaplayer;
+    private Media media;
+    private String fileNameSuara;
+    private ImageView imgview;
+    public String getFileNameSuara() {
+        return fileNameSuara;
+    }
 
+    public void setFileNameSuara(String fileNameSuara) {
+        this.fileNameSuara = fileNameSuara;
+    }
     @Override
     public  Text deskripsi() {
-        Text textDesc = new Text("Ayam, yang juga dikenal dengan nama ilmiah Canis lupus familiaris, adalah hewan peliharaan yang paling umum dan terkenal di dunia. Mereka adalah anggota keluarga Canidae dan merupakan keturunan dari serigala. Ayam telah hidup berdampingan dengan manusia selama ribuan tahun dan telah mengalami proses domestikasi yang intensif.\nAyam adalah hewan yang bervariasi dalam ukuran, bentuk, warna, dan karakteristik fisiknya. Ada ratusan ras Ayam yang diakui secara resmi, mulai dari yang sangat kecil seperti Chihuahua hingga yang sangat besar seperti Great Dane. Setiap ras memiliki ciri khasnya sendiri dalam hal penampilan, termasuk bentuk tubuh, bulu, bentuk kepala, dan ukuran telinga.");
+        Text textDesc = new Text("Ayam adalah hewan unggas yang sering dipelihara sebagai ternak. Mereka memiliki tubuh kecil hingga sedang dengan bulu yang beragam warna dan pola, tergantung pada jenisnya. Ayam biasanya memiliki paruh pendek, sayap yang kuat, dan kaki bersisik. Mereka adalah hewan oviparous yang menghasilkan telur yang sering dikonsumsi oleh manusia. Ayam juga dapat memberikan daging yang menjadi sumber protein yang penting dalam makanan manusia.");
+        textDesc.setWrappingWidth(300);
+        textDesc.setId("descAyam");
         return textDesc;
         
     }
 
     @Override
     public void suara() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'suara'");
+        path = "C:/Zoologya/app/src/main/resources/suaraAyam.mp3";
+         media = new Media(new File(path).toURI().toString());
+         mediaplayer = new MediaPlayer(media);
+        mediaplayer.play();
     }
 
     @Override
     public ImageView showImg() {
-        Image showImg = new Image("imgAyam.jpg");
-        ImageView imgview = new ImageView(showImg);
-        imgview.setFitWidth(150);
-        imgview.setFitHeight(150);
+        showImg = new Image("imgAyam.jpg");
+        imgview = new ImageView(showImg);
+        imgview.setFitHeight(200);
+        imgview.setFitWidth(300);
         return imgview;
     }
-    
+
 }
