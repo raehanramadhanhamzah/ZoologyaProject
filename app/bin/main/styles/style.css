@@ -50,16 +50,8 @@
     -fx-border-radius:50px;
 }
 
-#latarScene1{
-    -fx-background-color: #aff1af;
-    -fx-background-image:url('/app/src/main/resources/backgroundAPP.jpg');
-}
-/* MASUK SCENE 2 */
-#latarScene2{
-    -fx-background-color: #aff1af;
-    -fx-background-image:url('/app/src/main/resources/backgroundAPP.jpg');
-}
 
+/* MASUK SCENE 2 */
 
 #pilihanMenu{
     -fx-font-size: 20px;
@@ -69,7 +61,7 @@
     -fx-border-color:rgb(119, 180, 119);
     -fx-translate-y:45px;
 }
-#tombolHome{
+#tombolHome2{
     /* -fx-translate-x:-142px; */
     -fx-translate-y:270px;
     -fx-border-radius:10px;
@@ -117,12 +109,6 @@
 }
 
 /* MASUK SCENE 3 */
-#latarScene3{
-    /* -fx-background-color: #aff1af; */
-    -fx-background-image:url('/app/src/main/resources/backgroundAPP.jpg');
-    /* background-color:#90ee90 */
-}
-
 
 #namaHewan{
     -fx-font-size: 20px;
@@ -132,16 +118,7 @@
     -fx-border-color:rgb(119, 180, 119);
     -fx-translate-y:20px;
 }
-/* #tombolHome{
-    -fx-translate-x:-142px;
-    -fx-translate-y:270px;
-    -fx-border-radius:10px;
-    -fx-background-color:white;
-    -fx-background-radius:12px 12px 15px 12px;
-    -fx-border-color:rgb(19, 131, 19);
-    -fx-border-width:5px;
-    -fx-cursor:hand;
-} */
+
 #buttonAnjing{
     
     -fx-padding:15px 65px 15px 65px;
@@ -154,6 +131,11 @@
     /* font-weight: ; */
     -fx-cursor:hand;
     
+}
+#buttonAnjing:hover{
+    -fx-background-color:rgb(240, 240, 240);
+    -fx-text-fill:rgb(84, 207, 84);
+    -fx-cursor:hand;
 }
 #buttonSapi{
     
@@ -168,6 +150,12 @@
     -fx-cursor:hand;
     
 }
+#buttonSapi:hover{
+    -fx-background-color:rgb(240, 240, 240);
+    -fx-text-fill:rgb(84, 207, 84);
+    -fx-cursor:hand;
+}
+
 #buttonKucing{
     
     -fx-padding:15px 65px 15px 65px;
@@ -180,6 +168,12 @@
     /* font-weight: ; */
     -fx-cursor:hand;
     
+}
+
+#buttonKucing:hover{
+    -fx-background-color:rgb(240, 240, 240);
+    -fx-text-fill:rgb(84, 207, 84);
+    -fx-cursor:hand;
 }
 
 #buttonAyam{
@@ -195,3 +189,43 @@
     -fx-cursor:hand;
     
 }
+#buttonAyam:hover{
+    -fx-background-color:rgb(240, 240, 240);
+    -fx-text-fill:rgb(84, 207, 84);
+    -fx-cursor:hand;
+}
+
+#tombolHome3{
+    -fx-translate-y:210px;
+    -fx-border-radius:10px;
+    -fx-background-color:rgb(243, 237, 237);
+    -fx-background-radius:12px 12px 15px 12px;
+    -fx-border-color:rgb(19, 131, 19);
+    -fx-border-width:5px;
+    -fx-cursor:hand;
+}
+#judulAnjing{
+    -fx-border-color: rgb(106, 212, 106);
+    -fx-border-width: 3px;
+    -fx-translate-y:15px;
+    -fx-font-size:25px;
+    -fx-font-weight:bold;
+    -fx-padding:5px 15px 5px 15px;
+    -fx-border-radius:5px;
+    -fx-text-fill:rgb(36, 77, 36);
+    -fx-font-family:'Berlin Sans FB Demi';
+}       
+#showAnjingImage{
+    -fx-translate-y:20px;
+    -fx-fit-width:200px;
+    -fx-fit-height:200px;
+    -fx-translate-y:30px;
+}
+
+#descAnjing{
+    -fx-font-size:14px;
+    -fx-font-family:'Copperplate Gothic Bold';
+    -fx-fill:rgb(192, 194, 192);
+    -fx-translate-y:60px;
+    -fx-font-family:'Berlin Sans FB Demi';
+}   
