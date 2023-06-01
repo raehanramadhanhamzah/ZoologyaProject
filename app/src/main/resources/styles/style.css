@@ -2,14 +2,22 @@
 #namaApp{
     -fx-font-family:'Copperplate Gothic Bold';
     -fx-font-size: 40px;
-    -fx-padding: 20px;
+    -fx-padding: 15px;
     /* -fx-font-weight:bold; */
     -fx-text-fill:rgb(42, 104, 52);
     -fx-translate-y:25px;
 }
+
+#namaGroup{
+    -fx-font-family:'Copperplate Gothic Bold';
+    -fx-font-size: 20px;
+    -fx-text-fill:rgb(237, 239, 237);
+    -fx-translate-y:2px;
+}
+
 #Logo{
     -fx-padding:0px 0px 30px 0px;
-    -fx-translate-y:50px;
+    -fx-translate-y:80px;
 }
 #labelMasuk{
     /* -fx-translate-x : -150px; */
@@ -201,17 +209,32 @@
     -fx-cursor:hand;
 }
 #tombolBack2{
-    -fx-padding:15px 65px 15px 65px;
-    -fx-font-size: 16px;
+    -fx-padding:15px 40px 15px 40px;
+    -fx-font-size: 12px;
     -fx-background-radius:23px;
     -fx-background-color:white;
     -fx-text-fill:rgb(84, 207, 84);
     -fx-font-weight:bold;
     -fx-cursor:hand;
-    -fx-translate-y:170px;
+    -fx-translate-y:130px;
 }
 #tombolBack2:hover{
     -fx-background-color:rgb(16, 65, 16);
+    -fx-text-fill:white;
+    -fx-cursor:hand;
+}
+#tombolNext{
+    -fx-padding:15px 50px 15px 50px;
+    -fx-font-size: 12px;
+    -fx-background-radius:23px;
+    -fx-background-color:white;
+    -fx-text-fill:rgb(84, 207, 84);
+    -fx-font-weight:bold;
+    -fx-cursor:hand;
+    -fx-translate-y:130px;
+}
+#tombolNext:hover{
+    -fx-background-color:rgb(126, 232, 126);
     -fx-text-fill:white;
     -fx-cursor:hand;
 }
@@ -423,4 +446,267 @@
     -fx-background-color:rgb(240, 240, 240);
     -fx-text-fill:rgb(84, 207, 84);
     -fx-cursor:hand;
+}
+#buttonSinga{
+    
+    -fx-padding:15px 65px 15px 65px;
+    -fx-font-size: 20px;
+    -fx-translate-y:50px;
+    -fx-background-radius:10px;
+    -fx-background-color:rgb(84, 207, 84);
+    -fx-text-fill:white;
+    -fx-font-weight:500;
+    /* font-weight: ; */
+    -fx-cursor:hand;
+    -fx-font-weight:bold;
+}
+#judulSinga{
+    -fx-border-color: rgb(106, 212, 106);
+    -fx-border-width: 5px;
+    -fx-translate-y:15px;
+    -fx-font-size:25px;
+    -fx-font-weight:bold;
+    -fx-padding:5px 30px 5px 30px;
+    -fx-border-radius:5px;
+    -fx-text-fill:rgb(36, 77, 36);
+    -fx-font-family:'Berlin Sans FB Demi';
+}       
+#showSingaImage{
+    -fx-fit-width:10px;
+    -fx-fit-height:10px;
+    -fx-translate-y:50px;
+}
+
+#descSinga{
+    -fx-font-size:15px;
+    -fx-font-family:'Copperplate Gothic Bold';
+    -fx-fill:white;
+    -fx-translate-y:90px;
+    -fx-font-family:'Berlin Sans FB Demi';
+}   
+#tombolSuaraSinga{
+    -fx-padding:15px 30px 15px 30px;
+    -fx-font-size: 15px;
+    -fx-background-radius:10px;
+    -fx-background-color:rgb(84, 207, 84);
+    -fx-text-fill:white;
+    -fx-font-weight:bold;
+    -fx-cursor:hand;
+}
+#tombolSuaraSinga:hover{
+    -fx-background-color:rgb(240, 240, 240);
+    -fx-text-fill:rgb(84, 207, 84);
+    -fx-cursor:hand;
+}
+#tombolBackSinga{
+    -fx-padding:15px 30px 15px 30px;
+    -fx-font-size: 15px;
+    -fx-background-radius:10px;
+    -fx-background-color:rgb(84, 207, 84);
+    -fx-text-fill:white;
+    -fx-font-weight:bold;
+    -fx-cursor:hand;
+}
+#tombolBackSinga:hover{
+    -fx-background-color:rgb(240, 240, 240);
+    -fx-text-fill:rgb(84, 207, 84);
+    -fx-cursor:hand;
+}
+#buttonMonyet{
+    
+    -fx-padding:15px 55px 15px 55px;
+    -fx-font-size: 20px;
+    -fx-translate-y:80px;
+    -fx-background-radius:10px;
+    -fx-background-color:rgb(84, 207, 84);
+    -fx-text-fill:white;
+    -fx-font-weight:500;
+    /* font-weight: ; */
+    -fx-cursor:hand;
+    -fx-font-weight:bold;
+}
+#judulMonyet{
+    -fx-border-color: rgb(106, 212, 106);
+    -fx-border-width: 5px;
+    -fx-translate-y:15px;
+    -fx-font-size:25px;
+    -fx-font-weight:bold;
+    -fx-padding:5px 30px 5px 30px;
+    -fx-border-radius:5px;
+    -fx-text-fill:rgb(36, 77, 36);
+    -fx-font-family:'Berlin Sans FB Demi';
+}       
+#showMonyetImage{
+    -fx-fit-width:10px;
+    -fx-fit-height:10px;
+    -fx-translate-y:50px;
+}
+
+#descMonyet{
+    -fx-font-size:15px;
+    -fx-font-family:'Copperplate Gothic Bold';
+    -fx-fill:white;
+    -fx-translate-y:90px;
+    -fx-font-family:'Berlin Sans FB Demi';
+}   
+#tombolSuaraMonyet{
+    -fx-padding:15px 30px 15px 30px;
+    -fx-font-size: 15px;
+    -fx-background-radius:10px;
+    -fx-background-color:rgb(84, 207, 84);
+    -fx-text-fill:white;
+    -fx-font-weight:bold;
+    -fx-cursor:hand;
+}
+#tombolSuaraMonyet:hover{
+    -fx-background-color:rgb(240, 240, 240);
+    -fx-text-fill:rgb(84, 207, 84);
+    -fx-cursor:hand;
+}
+#tombolBackMonyet{
+    -fx-padding:15px 30px 15px 30px;
+    -fx-font-size: 15px;
+    -fx-background-radius:10px;
+    -fx-background-color:rgb(84, 207, 84);
+    -fx-text-fill:white;
+    -fx-font-weight:bold;
+    -fx-cursor:hand;
+}
+#tombolBackMonyet:hover{
+    -fx-background-color:rgb(240, 240, 240);
+    -fx-text-fill:rgb(84, 207, 84);
+    -fx-cursor:hand;
+}
+
+#judulKambing{
+    -fx-border-color: rgb(106, 212, 106);
+    -fx-border-width: 5px;
+    -fx-translate-y:15px;
+    -fx-font-size:25px;
+    -fx-font-weight:bold;
+    -fx-padding:5px 30px 5px 30px;
+    -fx-border-radius:5px;
+    -fx-text-fill:rgb(36, 77, 36);
+    -fx-font-family:'Berlin Sans FB Demi';
+}      
+
+#showKambingImage{
+    -fx-fit-width:10px;
+    -fx-fit-height:10px;
+    -fx-translate-y:45px;
+}
+
+#descKambing{
+    -fx-font-size:15px;
+    -fx-font-family:'Copperplate Gothic Bold';
+    -fx-fill:white;
+    -fx-translate-y:55px;
+    -fx-font-family:'Berlin Sans FB Demi';
+}   
+#tombolSuaraKambing{
+    -fx-padding:15px 30px 15px 30px;
+    -fx-font-size: 15px;
+    -fx-background-radius:10px;
+    -fx-background-color:rgb(84, 207, 84);
+    -fx-text-fill:white;
+    -fx-font-weight:bold;
+    -fx-cursor:hand;
+}
+#tombolSuaraKambing:hover{
+    -fx-background-color:rgb(240, 240, 240);
+    -fx-text-fill:rgb(84, 207, 84);
+    -fx-cursor:hand;
+}
+#tombolBackKambing{
+    -fx-padding:15px 30px 15px 30px;
+    -fx-font-size: 15px;
+    -fx-background-radius:10px;
+    -fx-background-color:rgb(84, 207, 84);
+    -fx-text-fill:white;
+    -fx-font-weight:bold;
+    -fx-cursor:hand;
+}
+#tombolBackKambing:hover{
+    -fx-background-color:rgb(240, 240, 240);
+    -fx-text-fill:rgb(84, 207, 84);
+    -fx-cursor:hand;
+}
+#buttonKambing{
+    
+    -fx-padding:15px 50px 15px 50px;
+    -fx-font-size: 20px;
+    -fx-translate-y:110px;
+    -fx-background-radius:10px;
+    -fx-background-color:rgb(84, 207, 84);
+    -fx-text-fill:white;
+    -fx-font-weight:500;
+    /* font-weight: ; */
+    -fx-cursor:hand;
+    -fx-font-weight:bold;
+}
+
+#judulBabi{
+    -fx-border-color: rgb(106, 212, 106);
+    -fx-border-width: 5px;
+    -fx-translate-y:15px;
+    -fx-font-size:25px;
+    -fx-font-weight:bold;
+    -fx-padding:5px 30px 5px 30px;
+    -fx-border-radius:5px;
+    -fx-text-fill:rgb(36, 77, 36);
+    -fx-font-family:'Berlin Sans FB Demi';
+}      
+
+#showBabiImage{
+    -fx-fit-width:10px;
+    -fx-fit-height:10px;
+    -fx-translate-y:45px;
+}
+
+#descBabi{
+    -fx-font-size:15px;
+    -fx-font-family:'Copperplate Gothic Bold';
+    -fx-fill:white;
+    -fx-translate-y:55px;
+    -fx-font-family:'Berlin Sans FB Demi';
+}   
+#tombolSuaraBabi{
+    -fx-padding:15px 30px 15px 30px;
+    -fx-font-size: 15px;
+    -fx-background-radius:10px;
+    -fx-background-color:rgb(84, 207, 84);
+    -fx-text-fill:white;
+    -fx-font-weight:bold;
+    -fx-cursor:hand;
+}
+#tombolSuaraBabi:hover{
+    -fx-background-color:rgb(240, 240, 240);
+    -fx-text-fill:rgb(84, 207, 84);
+    -fx-cursor:hand;
+}
+#tombolBackBabi{
+    -fx-padding:15px 30px 15px 30px;
+    -fx-font-size: 15px;
+    -fx-background-radius:10px;
+    -fx-background-color:rgb(84, 207, 84);
+    -fx-text-fill:white;
+    -fx-font-weight:bold;
+    -fx-cursor:hand;
+}
+#tombolBackBabi:hover{
+    -fx-background-color:rgb(240, 240, 240);
+    -fx-text-fill:rgb(84, 207, 84);
+    -fx-cursor:hand;
+}
+#buttonBabi{
+    
+    -fx-padding:15px 71px 15px 71px;
+    -fx-font-size: 20px;
+    -fx-translate-y:140px;
+    -fx-background-radius:10px;
+    -fx-background-color:rgb(84, 207, 84);
+    -fx-text-fill:white;
+    -fx-font-weight:500;
+    -fx-cursor:hand;
+    -fx-font-weight:bold;
 }
