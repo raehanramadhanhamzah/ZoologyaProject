@@ -26,7 +26,7 @@ public class Babi extends Animal{
     }
     @Override
     public  Text deskripsi() {
-        textDesc = new Text("Babi adalah hewan mamalia yang termasuk dalam keluarga Suidae dan genus Sus.Babi memiliki tubuh yang besar dengan bentuk yang bulat dan berotot. Babi memiliki kepala yang besar dengan ciri khas seperti moncong yang panjang dan hidung yang mencolok.Kulit babi ditutupi oleh rambut pendek dan kasar yang seringkali berwarna cokelat, hitam, atau belang-belang.Babi adalah hewan omnivora yang berarti mereka dapat memakan berbagai jenis makanan.Babi dapat hidup di berbagai habitat.");
+        textDesc = new Text("Babi adalah hewan mamalia yang termasuk dalam keluarga Suidae dan genus Sus. Babi juga memiliki tubuh yang besar dengan bentuk yang bulat dan berotot. Babi memiliki kepala yang besar dengan ciri khas seperti moncong yang panjang dan hidung yang mencolok.Kulit babi ditutupi oleh rambut pendek dan kasar yang seringkali berwarna cokelat, hitam, atau belang-belang.Babi adalah hewan omnivora yang berarti mereka dapat memakan berbagai jenis makanan.Babi dapat hidup di berbagai habitat.");
         textDesc.setWrappingWidth(300);
         textDesc.setId("descBabi");
         return textDesc;

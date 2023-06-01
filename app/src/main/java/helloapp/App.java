@@ -1,8 +1,4 @@
 package helloapp;
-
-
-
-
 import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -315,12 +311,6 @@ class  showScene{
             showScene show = new showScene(stage);
             show.showAnimalList();
         });
-        // Button buttonNext = new Button("Next");
-        // buttonNext.setId("tombolNext");
-        // buttonNext.setOnAction(action -> {
-        //     showScene show = new showScene(stage);
-        //     show.showAnimalList2();
-        // });
 
         VBox vbox = new VBox(l1,singaButton, monyetButton,kambingButton, babiButton);
         vbox.setId("latarScene3");
