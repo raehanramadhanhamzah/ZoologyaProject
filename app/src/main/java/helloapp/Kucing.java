@@ -2,7 +2,6 @@ package helloapp;
 
 import java.io.File;
 
-import javafx.geometry.Pos;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.media.Media;
@@ -35,7 +34,7 @@ public class Kucing extends Animal{
 
     @Override
     public void suara() {
-        path = "C:/Zoologya/app/src/main/resources/suaraKucing.mp3";
+        path = "sound/suaraKucing.mp3";
          media = new Media(new File(path).toURI().toString());
          mediaplayer = new MediaPlayer(media);
         mediaplayer.play();

@@ -2,7 +2,6 @@ package helloapp;
 
 import java.io.File;
 
-import javafx.geometry.Pos;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.media.Media;
@@ -17,6 +16,7 @@ public class Ayam extends Animal{
     private Media media;
     private String fileNameSuara;
     private ImageView imgview;
+    private Text textDesc;
     public String getFileNameSuara() {
         return fileNameSuara;
     }
@@ -26,7 +26,7 @@ public class Ayam extends Animal{
     }
     @Override
     public  Text deskripsi() {
-        Text textDesc = new Text("Ayam adalah hewan unggas yang sering dipelihara sebagai ternak. Mereka memiliki tubuh kecil hingga sedang dengan bulu yang beragam warna dan pola, tergantung pada jenisnya. Ayam biasanya memiliki paruh pendek, sayap yang kuat, dan kaki bersisik. Mereka adalah hewan oviparous yang menghasilkan telur yang sering dikonsumsi oleh manusia. Ayam juga dapat memberikan daging yang menjadi sumber protein yang penting dalam makanan manusia.");
+        textDesc = new Text("Ayam adalah hewan unggas yang sering dipelihara sebagai ternak. Mereka memiliki tubuh kecil hingga sedang dengan bulu yang beragam warna dan pola, tergantung pada jenisnya. Ayam biasanya memiliki paruh pendek, sayap yang kuat, dan kaki bersisik. Mereka adalah hewan oviparous yang menghasilkan telur yang sering dikonsumsi oleh manusia. Ayam juga dapat memberikan daging yang menjadi sumber protein yang penting dalam makanan manusia.");
         textDesc.setWrappingWidth(300);
         textDesc.setId("descAyam");
         return textDesc;
@@ -35,9 +35,9 @@ public class Ayam extends Animal{
 
     @Override
     public void suara() {
-        path = "C:/Zoologya/app/src/main/resources/suaraAyam.mp3";
-         media = new Media(new File(path).toURI().toString());
-         mediaplayer = new MediaPlayer(media);
+        path = "sound/suaraAyam.mp3";
+        media = new Media(new File(path).toURI().toString());
+        mediaplayer = new MediaPlayer(media);
         mediaplayer.play();
     }
 
