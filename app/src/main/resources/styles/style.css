@@ -216,7 +216,7 @@
     -fx-text-fill:rgb(84, 207, 84);
     -fx-font-weight:bold;
     -fx-cursor:hand;
-    -fx-translate-y:130px;
+    /* -fx-translate-y:130px; */
 }
 #tombolBack2:hover{
     -fx-background-color:rgb(16, 65, 16);
@@ -231,7 +231,7 @@
     -fx-text-fill:rgb(84, 207, 84);
     -fx-font-weight:bold;
     -fx-cursor:hand;
-    -fx-translate-y:130px;
+    /* -fx-translate-y:130px; */
 }
 #tombolNext:hover{
     -fx-background-color:rgb(126, 232, 126);
@@ -460,6 +460,13 @@
     -fx-cursor:hand;
     -fx-font-weight:bold;
 }
+
+#buttonSinga:hover{
+    -fx-background-color:rgb(240, 240, 240);
+    -fx-text-fill:rgb(84, 207, 84);
+    -fx-cursor:hand;
+}
+
 #judulSinga{
     -fx-border-color: rgb(106, 212, 106);
     -fx-border-width: 5px;
@@ -525,6 +532,12 @@
     -fx-cursor:hand;
     -fx-font-weight:bold;
 }
+#buttonMonyet:hover{
+    -fx-background-color:rgb(240, 240, 240);
+    -fx-text-fill:rgb(84, 207, 84);
+    -fx-cursor:hand;
+}
+
 #judulMonyet{
     -fx-border-color: rgb(106, 212, 106);
     -fx-border-width: 5px;
@@ -589,7 +602,24 @@
     -fx-text-fill:rgb(36, 77, 36);
     -fx-font-family:'Berlin Sans FB Demi';
 }      
-
+#buttonKambing{
+    
+    -fx-padding:15px 50px 15px 50px;
+    -fx-font-size: 20px;
+    -fx-translate-y:110px;
+    -fx-background-radius:10px;
+    -fx-background-color:rgb(84, 207, 84);
+    -fx-text-fill:white;
+    -fx-font-weight:500;
+    /* font-weight: ; */
+    -fx-cursor:hand;
+    -fx-font-weight:bold;
+}
+#buttonKambing:hover{
+    -fx-background-color:rgb(240, 240, 240);
+    -fx-text-fill:rgb(84, 207, 84);
+    -fx-cursor:hand;
+}
 #showKambingImage{
     -fx-fit-width:10px;
     -fx-fit-height:10px;
@@ -630,19 +660,6 @@
     -fx-background-color:rgb(240, 240, 240);
     -fx-text-fill:rgb(84, 207, 84);
     -fx-cursor:hand;
-}
-#buttonKambing{
-    
-    -fx-padding:15px 50px 15px 50px;
-    -fx-font-size: 20px;
-    -fx-translate-y:110px;
-    -fx-background-radius:10px;
-    -fx-background-color:rgb(84, 207, 84);
-    -fx-text-fill:white;
-    -fx-font-weight:500;
-    /* font-weight: ; */
-    -fx-cursor:hand;
-    -fx-font-weight:bold;
 }
 
 #judulBabi{
@@ -709,4 +726,9 @@
     -fx-font-weight:500;
     -fx-cursor:hand;
     -fx-font-weight:bold;
+}
+#buttonBabi:hover{
+    -fx-background-color:rgb(240, 240, 240);
+    -fx-text-fill:rgb(84, 207, 84);
+    -fx-cursor:hand;
 }

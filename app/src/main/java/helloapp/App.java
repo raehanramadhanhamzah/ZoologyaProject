@@ -146,8 +146,8 @@ class  showScene{
         //POLIMORFISME
         Animal objAnjing = new Anjing();
         Animal objKucing = new Kucing();
-        Animal objAyam = new Ayam();
         Animal objSapi = new Sapi();
+        Animal objAyam = new Ayam();
         
         Button anjingButton = objAnjing.TombolHewan("Anjing");
         anjingButton.setId("buttonAnjing");
@@ -160,15 +160,15 @@ class  showScene{
             showSceneKucing();
         });
         
-        Button ayamButton = objAyam.TombolHewan("Ayam");
-        ayamButton.setId("buttonAyam");
-        ayamButton.setOnAction(action -> {
-            showSceneAyam();
-        });
         Button sapiButton = objSapi.TombolHewan("Sapi");
         sapiButton.setId("buttonSapi");
         sapiButton.setOnAction(action -> {
             showSceneSapi();
+        });
+        Button ayamButton = objAyam.TombolHewan("Ayam");
+        ayamButton.setId("buttonAyam");
+        ayamButton.setOnAction(action -> {
+            showSceneAyam();
         });
     
 
@@ -192,13 +192,13 @@ class  showScene{
         ImageView imgViewSapi = objSapi.imageView(sapiImage);
         imgViewSapi.setFitWidth(55);
         imgViewSapi.setFitHeight(55);
-        imgViewSapi.setTranslateX(-20);
+        imgViewSapi.setTranslateX(-30);
         sapiButton.setGraphic(imgViewSapi);
         
         ImageView imgViewAyam = objAyam.imageView(ayamImage);
         imgViewAyam.setFitWidth(55);
         imgViewAyam.setFitHeight(55);
-        imgViewAyam.setTranslateX(-20);
+        imgViewAyam.setTranslateX(-25);
         ayamButton.setGraphic(imgViewAyam);
 
         
@@ -222,7 +222,7 @@ class  showScene{
         HBox hbox = new HBox(10);
         hbox.setAlignment(Pos.CENTER);
         hbox.setSpacing(20);
-        hbox.setTranslateY(50);
+        hbox.setTranslateY(160);
         hbox.getChildren().addAll(buttonHome,buttonNext);
         VBox root = new VBox(vbox,hbox);
         root.setBackground(bg);
@@ -290,19 +290,19 @@ class  showScene{
         ImageView imgViewMonyet = objMonyet.imageView(monyetImage);
         imgViewMonyet.setFitWidth(55);
         imgViewMonyet.setFitHeight(55);
-        imgViewMonyet.setTranslateX(-20);
+        imgViewMonyet.setTranslateX(-10);
         monyetButton.setGraphic(imgViewMonyet);
         
         ImageView imgViewKambing = objKambing.imageView(kambingImage);
         imgViewKambing.setFitWidth(55);
         imgViewKambing.setFitHeight(55);
-        imgViewKambing.setTranslateX(-20);
+        imgViewKambing.setTranslateX(-3);
         kambingButton.setGraphic(imgViewKambing);
 
         ImageView imgViewBabi = objBabi.imageView(BabiImage);
         imgViewBabi.setFitWidth(55);
         imgViewBabi.setFitHeight(55);
-        imgViewBabi.setTranslateX(-20);
+        imgViewBabi.setTranslateX(-25);
         babiButton.setGraphic(imgViewBabi);
 
         Button buttonHome = new Button("Kembali");
@@ -318,7 +318,7 @@ class  showScene{
         HBox hbox = new HBox();
         hbox.setSpacing(30);
         hbox.setAlignment(Pos.CENTER);
-        hbox.setTranslateY(45);
+        hbox.setTranslateY(160);
         hbox.getChildren().addAll(buttonHome);
         vbox.setBackground(bg);
         VBox root = new VBox(vbox,hbox);
@@ -709,11 +709,11 @@ class  showScene{
         } );
         Button buttonBack = new Button("Kembali");
         buttonBack.setId("tombolBackBabi");
-        
         buttonBack.setOnAction(action -> {
             showScene show = new showScene(stage);
             show.showAnimalList();
         });
+        
         VBox vbox = new VBox(l1,gambarBabi,desc,suaraBabi);
         vbox.setId("latarSceneBabi");
         vbox.setAlignment(Pos.TOP_CENTER);
