@@ -52,8 +52,11 @@ public class Sapi extends Animal{
 
     @Override
     public ImageView showImgQuiz() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'showImgQuiz'");
+        showImg = new Image("Sepi.jpg");
+        imgView = new ImageView(showImg);
+        imgView.setFitHeight(200);
+        imgView.setFitWidth(300);
+        return imgView;
     }
 
 }

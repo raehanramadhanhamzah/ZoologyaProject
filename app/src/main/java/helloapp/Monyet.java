@@ -58,5 +58,4 @@ public class Monyet extends Animal{
         imgView.setFitWidth(300);
         return imgView;
     }
-
 }

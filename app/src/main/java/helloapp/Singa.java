@@ -50,7 +50,7 @@ public class Singa extends Animal{
 
     @Override
     public ImageView showImgQuiz() {
-        showImg = new Image("");
+        showImg = new Image("lion.jpg");
         imgview = new ImageView(showImg);
         
         return imgview;
