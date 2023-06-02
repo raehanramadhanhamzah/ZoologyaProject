@@ -50,4 +50,13 @@ public class Ayam extends Animal{
         return imgview;
     }
 
+    @Override
+    public ImageView showImgQuiz() {
+        showImg = new Image("imgAyam.jpg");
+        imgview = new ImageView(showImg);
+        imgview.setFitHeight(200);
+        imgview.setFitWidth(300);
+        return imgview;
+    }
+
 }

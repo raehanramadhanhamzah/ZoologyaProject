@@ -49,5 +49,11 @@ public class Kambing extends Animal{
         return imgview;
     }
 
+    @Override
+    public ImageView showImgQuiz() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'showImgQuiz'");
+    }
+
 }
 

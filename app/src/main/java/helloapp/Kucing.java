@@ -49,4 +49,13 @@ public class Kucing extends Animal{
         return imgview;
     }
 
+    @Override
+    public ImageView showImgQuiz() {
+        showImg = new Image("imgKucing.jpg");
+        imgview = new ImageView(showImg);
+        imgview.setFitHeight(200);
+        imgview.setFitWidth(300);
+        return imgview;
+    }
+
 }

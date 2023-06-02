@@ -40,4 +40,5 @@ abstract public class Animal {
     abstract public Text deskripsi();
     abstract public void suara();
     abstract public ImageView showImg();
+    abstract public ImageView showImgQuiz();
 }

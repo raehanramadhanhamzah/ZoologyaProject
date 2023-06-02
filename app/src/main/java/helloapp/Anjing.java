@@ -48,4 +48,12 @@ public class Anjing extends Animal{
         return imgview;
     }
 
+    @Override
+    public ImageView showImgQuiz() {
+        showImg = new Image("imgAnjing.jpg");
+        imgview = new ImageView(showImg);
+        
+        return imgview;
+    }
+
 }

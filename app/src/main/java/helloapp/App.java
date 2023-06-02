@@ -1,4 +1,7 @@
 package helloapp;
+import java.util.ArrayList;
+import java.util.Collections;
+
 import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -20,9 +23,77 @@ import javafx.stage.Stage;
 
 class  showScene{
     private Stage stage;
+    private int tambahScore;
+    private Label score;
+    private String ubahStr;
+    private int picknumber;
+    private String ubahString = "0";
+    ArrayList<Integer> listAngka = new ArrayList<>();
+    private TextField inputNama;
+    public String getUbahStr() {
+        return ubahStr;
+    }
+    public void setUbahStr(String ubahStr) {
+        this.ubahStr = ubahStr;
+    }
+
     public showScene(Stage stage) {
         this.stage = stage;
         stage.setTitle("Zoologya");
+        listAngka.add(1);
+        listAngka.add(2);
+        listAngka.add(3);
+        Collections.shuffle(listAngka);
+        setPicknumber(listAngka.get(0));
+
+        System.out.println(listAngka.get(0));
+        System.out.println(listAngka.get(1));
+        System.out.println(listAngka.get(2));
+    }
+    public int getPicknumber() {
+    return picknumber;
+    }
+
+    public void setPicknumber(int picknumber) {
+    this.picknumber = picknumber;
+    }
+    // public void cekList(){
+    //         if(listAngka.isEmpty) 
+    //     }  
+
+
+    public void tampilkanHewanRandom(int pilihan){
+        if(listAngka.isEmpty()){
+            showfinalScore();
+        }else{
+
+            setPicknumber(listAngka.get(0));
+            if(pilihan==1){
+                    if(listAngka.contains(1)){
+                        
+                        showQuiz1();
+                    }else{
+                        tampilkanHewanRandom(getPicknumber());
+                    }
+        
+            }else if(pilihan==2){
+                if(listAngka.contains(2)){
+                    
+                    showQuiz2();
+                }else{
+                    tampilkanHewanRandom(getPicknumber());
+                }
+            }else if(pilihan==3){
+                if(listAngka.contains(3)){
+                    
+                    showQuiz3();
+                }else{
+                    tampilkanHewanRandom(getPicknumber());
+                }
+            }else{
+                tampilkanHewanRandom(getPicknumber());
+            }
+        }
     }
     public void showHomeScene() {
         
@@ -52,7 +123,7 @@ class  showScene{
         l3.setId("labelMasuk");
         Button buttonLogin = new Button("Masuk");
         buttonLogin.setId("tombolMasuk");
-        TextField inputNama = new TextField();
+        inputNama = new TextField();
         inputNama.setId("inputNama");
         
         buttonLogin.setOnAction(action -> {
@@ -108,6 +179,9 @@ class  showScene{
         gambarJotstick.setFitHeight(55);
         gambarJotstick.setTranslateX(-20);
         buttonMG.setGraphic(gambarJotstick);
+        buttonMG.setOnAction(action -> {
+            tampilkanHewanRandom(getPicknumber());
+        });
         
         Button buttonHome = new Button("Kembali");
         buttonHome.setId("tombolBack");
@@ -128,7 +202,6 @@ class  showScene{
         
     }
 
-    
     public void showAnimalList() {
         Image img = new Image("backgroundAPP.jpg");
         BackgroundImage bgIMG = new BackgroundImage(
@@ -146,8 +219,8 @@ class  showScene{
         //POLIMORFISME
         Animal objAnjing = new Anjing();
         Animal objKucing = new Kucing();
-        Animal objSapi = new Sapi();
         Animal objAyam = new Ayam();
+        Animal objSapi = new Sapi();
         
         Button anjingButton = objAnjing.TombolHewan("Anjing");
         anjingButton.setId("buttonAnjing");
@@ -160,15 +233,15 @@ class  showScene{
             showSceneKucing();
         });
         
-        Button sapiButton = objSapi.TombolHewan("Sapi");
-        sapiButton.setId("buttonSapi");
-        sapiButton.setOnAction(action -> {
-            showSceneSapi();
-        });
         Button ayamButton = objAyam.TombolHewan("Ayam");
         ayamButton.setId("buttonAyam");
         ayamButton.setOnAction(action -> {
             showSceneAyam();
+        });
+        Button sapiButton = objSapi.TombolHewan("Sapi");
+        sapiButton.setId("buttonSapi");
+        sapiButton.setOnAction(action -> {
+            showSceneSapi();
         });
     
 
@@ -192,13 +265,13 @@ class  showScene{
         ImageView imgViewSapi = objSapi.imageView(sapiImage);
         imgViewSapi.setFitWidth(55);
         imgViewSapi.setFitHeight(55);
-        imgViewSapi.setTranslateX(-30);
+        imgViewSapi.setTranslateX(-20);
         sapiButton.setGraphic(imgViewSapi);
         
         ImageView imgViewAyam = objAyam.imageView(ayamImage);
         imgViewAyam.setFitWidth(55);
         imgViewAyam.setFitHeight(55);
-        imgViewAyam.setTranslateX(-25);
+        imgViewAyam.setTranslateX(-20);
         ayamButton.setGraphic(imgViewAyam);
 
         
@@ -216,11 +289,11 @@ class  showScene{
             show.showAnimalList2();
         });
 
-        VBox vbox = new VBox(l1,anjingButton,sapiButton,kucingButton,ayamButton,buttonHome);
+        VBox vbox = new VBox(l1,anjingButton,sapiButton,kucingButton,ayamButton);
         vbox.setId("latarScene3");
         vbox.setAlignment(Pos.TOP_CENTER);
-        HBox hbox = new HBox(10);
-        hbox.setAlignment(Pos.CENTER);
+        HBox hbox = new HBox();
+        hbox.setAlignment(Pos.BOTTOM_CENTER);
         hbox.setSpacing(20);
         hbox.setTranslateY(160);
         hbox.getChildren().addAll(buttonHome,buttonNext);
@@ -290,19 +363,19 @@ class  showScene{
         ImageView imgViewMonyet = objMonyet.imageView(monyetImage);
         imgViewMonyet.setFitWidth(55);
         imgViewMonyet.setFitHeight(55);
-        imgViewMonyet.setTranslateX(-10);
+        imgViewMonyet.setTranslateX(-20);
         monyetButton.setGraphic(imgViewMonyet);
         
         ImageView imgViewKambing = objKambing.imageView(kambingImage);
         imgViewKambing.setFitWidth(55);
         imgViewKambing.setFitHeight(55);
-        imgViewKambing.setTranslateX(-3);
+        imgViewKambing.setTranslateX(-20);
         kambingButton.setGraphic(imgViewKambing);
 
         ImageView imgViewBabi = objBabi.imageView(BabiImage);
         imgViewBabi.setFitWidth(55);
         imgViewBabi.setFitHeight(55);
-        imgViewBabi.setTranslateX(-25);
+        imgViewBabi.setTranslateX(-20);
         babiButton.setGraphic(imgViewBabi);
 
         Button buttonHome = new Button("Kembali");
@@ -317,7 +390,7 @@ class  showScene{
         vbox.setAlignment(Pos.TOP_CENTER);
         HBox hbox = new HBox();
         hbox.setSpacing(30);
-        hbox.setAlignment(Pos.CENTER);
+        hbox.setAlignment(Pos.BOTTOM_CENTER);
         hbox.setTranslateY(160);
         hbox.getChildren().addAll(buttonHome);
         vbox.setBackground(bg);
@@ -709,11 +782,11 @@ class  showScene{
         } );
         Button buttonBack = new Button("Kembali");
         buttonBack.setId("tombolBackBabi");
+        
         buttonBack.setOnAction(action -> {
             showScene show = new showScene(stage);
             show.showAnimalList();
         });
-        
         VBox vbox = new VBox(l1,gambarBabi,desc,suaraBabi);
         vbox.setId("latarSceneBabi");
         vbox.setAlignment(Pos.TOP_CENTER);
@@ -725,6 +798,257 @@ class  showScene{
         VBox root = new VBox(vbox,hbox);
         root.setBackground(bg);
         Scene scene2 = new Scene(root, 360, 650);
+        scene2.getStylesheets().add(getClass().getResource("/styles/style.css").toExternalForm());
+        stage.setScene(scene2);
+    
+        stage.show();
+    }
+    public void showQuiz1(){
+        listAngka.remove(0);
+        Image img = new Image("backgroundAPP.jpg");
+        BackgroundImage bgIMG = new BackgroundImage(
+            img,
+            BackgroundRepeat.NO_REPEAT,
+            BackgroundRepeat.NO_REPEAT,
+            BackgroundPosition.CENTER,
+            new BackgroundSize(100, 100, true, true, true, true)
+        );
+        Background bg = new Background(bgIMG);
+        
+        Anjing objAnjing = new Anjing();
+        
+        Label l1 = new Label("NAMA HEWAN APA PADA GAMBAR ?");
+        l1.setId("judulQuiz1");
+        ImageView imgQuiz1 = objAnjing.showImgQuiz();
+        imgQuiz1.setId("imgQuiz1");
+        imgQuiz1.setFitHeight(200);
+        imgQuiz1.setFitWidth(300);
+    
+        score = new Label("Score : "+ubahString+"/5");
+        score.setId("score");
+        Label ketJawaban = new Label("");
+        ketJawaban.setId("ketJawaban");
+        
+        Button nextButtonQuiz = new Button("Selanjutnya");
+        nextButtonQuiz.setId("nextButtonQuiz1");
+        nextButtonQuiz.setOnAction(action ->{
+            tampilkanHewanRandom(getPicknumber());
+        } );
+    
+        Button option1 = new Button("Anjing");
+        Button option2 = new Button("Kucing");
+        option1.setId("option1Quiz1");
+        option1.setOnAction(action ->{
+            option1.setDisable(true);
+            option2.setDisable(true);
+            tambahScore +=1;
+            ubahString = Integer.toString(tambahScore);
+            ketJawaban.setText("BENAR");
+            score.setText("Score : "+ ubahString+"/5");
+        } );
+        option2.setId("option2Quiz2");
+        option2.setOnAction(action ->{
+            option1.setDisable(true);
+            option2.setDisable(true);
+            ubahString = Integer.toString(tambahScore);
+            ketJawaban.setText("SALAH");
+            score.setText("Score : "+ ubahString+"/5");
+        } );
+        
+        VBox vbox = new VBox(score,l1,imgQuiz1,ketJawaban);
+        VBox vbox2 = new VBox(nextButtonQuiz);
+        vbox.setId("latarSceneAyam");
+        vbox.setAlignment(Pos.TOP_CENTER);
+        vbox2.setAlignment(Pos.BOTTOM_CENTER);
+        vbox2.setTranslateY(130);
+        HBox hbox = new HBox(10);
+        hbox.setAlignment(Pos.CENTER);
+        hbox.setSpacing(30);
+        hbox.setTranslateY(100);
+        hbox.getChildren().addAll(option1,option2);
+        VBox root = new VBox(vbox,hbox,vbox2);
+        root.setBackground(bg);
+        Scene scene2 = new Scene(root, 360, 650);
+        scene2.getStylesheets().add(getClass().getResource("/styles/style.css").toExternalForm());
+        stage.setScene(scene2);
+    
+        stage.show();
+    }
+    public void showQuiz2(){
+        listAngka.remove(0);
+        Image img = new Image("backgroundAPP.jpg");
+        BackgroundImage bgIMG = new BackgroundImage(
+            img,
+            BackgroundRepeat.NO_REPEAT,
+            BackgroundRepeat.NO_REPEAT,
+            BackgroundPosition.CENTER,
+            new BackgroundSize(100, 100, true, true, true, true)
+        );
+        Background bg = new Background(bgIMG);
+        
+        Kucing objKucing = new Kucing();
+        
+        Label l1 = new Label("NAMA HEWAN APA PADA GAMBAR ?");
+        l1.setId("judulQuiz2");
+        ImageView imgQuiz2 = objKucing.showImgQuiz();
+        imgQuiz2.setId("imgQuiz1");
+        imgQuiz2.setFitHeight(200);
+        imgQuiz2.setFitWidth(300);
+    
+        score = new Label("Score : "+ubahString+"/5");
+        score.setId("score");
+        Label ketJawaban = new Label("");
+        ketJawaban.setId("ketJawaban");
+        
+        Button nextButtonQuiz = objKucing.TombolHewan("Selanjutnya");
+        nextButtonQuiz.setId("nextButtonQuiz2");
+        nextButtonQuiz.setOnAction(action ->{
+            tampilkanHewanRandom(getPicknumber());
+        } );
+    
+        Button option1 = new Button("Kambing");
+        Button option2 = new Button("Kucing");
+        option1.setId("option2Quiz2");
+        option1.setOnAction(action ->{
+            option1.setDisable(true);
+            option2.setDisable(true);
+            ubahString = Integer.toString(tambahScore);
+            ketJawaban.setText("SALAH");
+            score.setText("Score : "+ ubahString+"/5");
+        } );
+        option2.setId("option2Quiz2");
+        option2.setOnAction(action ->{
+            option1.setDisable(true);
+            option2.setDisable(true);
+            tambahScore +=1;
+            ubahString = Integer.toString(tambahScore);
+            ketJawaban.setText("BENAR");
+            score.setText("Score : "+ ubahString+"/5");
+        } );
+        
+        VBox vbox = new VBox(score,l1,imgQuiz2,ketJawaban);
+        VBox vbox2 = new VBox(nextButtonQuiz);
+        vbox.setId("latarSceneKucing");
+        vbox.setAlignment(Pos.TOP_CENTER);
+        vbox2.setAlignment(Pos.BOTTOM_CENTER);
+        vbox2.setTranslateY(130);
+        HBox hbox = new HBox(10);
+        hbox.setAlignment(Pos.CENTER);
+        hbox.setSpacing(30);
+        hbox.setTranslateY(100);
+        hbox.getChildren().addAll(option1,option2);
+        VBox root = new VBox(vbox,hbox,vbox2);
+        root.setBackground(bg);
+        Scene scene2 = new Scene(root, 360, 650);
+        scene2.getStylesheets().add(getClass().getResource("/styles/style.css").toExternalForm());
+        stage.setScene(scene2);
+    
+        stage.show();
+    }
+    public void showQuiz3(){
+        listAngka.remove(0);
+        Image img = new Image("backgroundAPP.jpg");
+        BackgroundImage bgIMG = new BackgroundImage(
+            img,
+            BackgroundRepeat.NO_REPEAT,
+            BackgroundRepeat.NO_REPEAT,
+            BackgroundPosition.CENTER,
+            new BackgroundSize(100, 100, true, true, true, true)
+        );
+        Background bg = new Background(bgIMG);
+        
+        Ayam objAyam = new Ayam();
+        
+        Label l1 = new Label("NAMA HEWAN APA PADA GAMBAR ?");
+        l1.setId("judulQuiz3");
+        ImageView imgQuiz3 = objAyam.showImgQuiz();
+        imgQuiz3.setId("imgQuiz3");
+        imgQuiz3.setFitHeight(200);
+        imgQuiz3.setFitWidth(300);
+    
+        score = new Label("Score : "+ubahString+"/5");
+        score.setId("score");
+        Label ketJawaban = new Label("");
+        ketJawaban.setId("ketJawaban");
+        
+        Button nextButtonQuiz = new Button("Selanjutnya");
+        nextButtonQuiz.setId("nextButtonQui3");
+        nextButtonQuiz.setOnAction(action ->{
+            tampilkanHewanRandom(getPicknumber());
+        } );
+    
+        Button option1 = new Button("Ayam");
+        Button option2 = new Button("Sapi");
+        option1.setId("option1Quiz3");
+        option1.setOnAction(action ->{
+            option1.setDisable(true);
+            option2.setDisable(true);
+            tambahScore +=1;
+            ubahString = Integer.toString(tambahScore);
+            ketJawaban.setText("BENAR");
+            score.setText("Score : "+ ubahString+"/5");
+        } );
+        option2.setId("option2Quiz3");
+        option2.setOnAction(action ->{
+            option1.setDisable(true);
+            option2.setDisable(true);
+            ubahString = Integer.toString(tambahScore);
+            ketJawaban.setText("SALAH");
+            score.setText("Score : "+ ubahString+"/5");
+        } );
+        
+        VBox vbox = new VBox(score,l1,imgQuiz3,ketJawaban);
+        VBox vbox2 = new VBox(nextButtonQuiz);
+        vbox.setId("latarSceneAyam");
+        vbox.setAlignment(Pos.TOP_CENTER);
+        vbox2.setAlignment(Pos.BOTTOM_CENTER);
+        vbox2.setTranslateY(130);
+        HBox hbox = new HBox(10);
+        hbox.setAlignment(Pos.CENTER);
+        hbox.setSpacing(30);
+        hbox.setTranslateY(100);
+        hbox.getChildren().addAll(option1,option2);
+        VBox root = new VBox(vbox,hbox,vbox2);
+        root.setBackground(bg);
+        Scene scene2 = new Scene(root, 360, 650);
+        scene2.getStylesheets().add(getClass().getResource("/styles/style.css").toExternalForm());
+        stage.setScene(scene2);
+    
+        stage.show();
+    }
+    public void showfinalScore(){
+        Image img = new Image("backgroundAPP.jpg");
+        BackgroundImage bgIMG = new BackgroundImage(
+            img,
+            BackgroundRepeat.NO_REPEAT,
+            BackgroundRepeat.NO_REPEAT,
+            BackgroundPosition.CENTER,
+            new BackgroundSize(100, 100, true, true, true, true)
+        );
+        Background bg = new Background(bgIMG);
+        
+        
+        Label l1 = new Label("HASIL SCORE " +inputNama.getText());
+        Label l2 = new Label(ubahString);
+        l1.setId("resultScore");
+        // ImageView imgQuiz3 = objAyam.showImgQuiz();
+        // imgQuiz3.setId("imgQuiz3");
+        // imgQuiz3.setFitHeight(200);
+        // imgQuiz3.setFitWidth(300);
+    
+        
+        
+        VBox vbox = new VBox(l1,l2);
+        vbox.setId("latarSceneFinalScore");
+        vbox.setAlignment(Pos.TOP_CENTER);
+        // HBox hbox = new HBox(10);
+        // hbox.setAlignment(Pos.CENTER);
+        // hbox.setSpacing(30);
+        // hbox.setTranslateY(100);
+        // hbox.getChildren().addAll(option1,option2);
+        // VBox root = new VBox(vbox,hbox,vbox2);
+        vbox.setBackground(bg);
+        Scene scene2 = new Scene(vbox, 360, 650);
         scene2.getStylesheets().add(getClass().getResource("/styles/style.css").toExternalForm());
         stage.setScene(scene2);
     
