@@ -52,8 +52,11 @@ public class Monyet extends Animal{
 
     @Override
     public ImageView showImgQuiz() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'showImgQuiz'");
+        showImg = new Image("monkey.jpeg");
+        imgView = new ImageView(showImg);
+        imgView.setFitHeight(200);
+        imgView.setFitWidth(300);
+        return imgView;
     }
 
 }

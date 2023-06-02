@@ -50,8 +50,10 @@ public class Singa extends Animal{
 
     @Override
     public ImageView showImgQuiz() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'showImgQuiz'");
+        showImg = new Image("");
+        imgview = new ImageView(showImg);
+        
+        return imgview;
     }
 
 }
