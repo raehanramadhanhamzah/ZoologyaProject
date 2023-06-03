@@ -56,4 +56,10 @@ public class Anjing extends Animal{
         return imgview;
     }
 
+    @Override
+    public void suaraQuiz() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'suaraQuiz'");
+    }
+
 }

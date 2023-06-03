@@ -20,11 +20,11 @@
     -fx-translate-y:80px;
 }
 #labelMasuk{
-    /* -fx-translate-x : -150px; */
     -fx-font-size:17px;
     -fx-text-fill:rgb(214, 211, 211);
     -fx-translate-y:170px;
     -fx-font-family:'Berlin Sans FB';
+    /* -fx-font-weight:bold; */
     
 }
 #inputNama{
@@ -32,8 +32,8 @@
     -fx-pref-width: 90px ;
     -fx-max-width: 250px;
     -fx-pref-height: 35px;
-    /* -fx-translate-x: -40px; */
     -fx-translate-y:180px;
+    -fx-font-weight:bold;
     
 }
 
@@ -41,7 +41,8 @@
     -fx-font-size: 15px;
     -fx-font-weight: 650;
     -fx-background-radius: 50px;
-    -fx-background-color: white;
+    -fx-background-color: rgb(8, 48, 8);
+    -fx-text-fill:rgb(216, 216, 216);
     -fx-padding:15px 90px 15px 90px;
     -fx-cursor:hand;
     /* -fx-translate-x: -150px; */
@@ -51,8 +52,8 @@
 #tombolMasuk:hover{
     
     -fx-padding:15px 90px 15px 90px;
-    -fx-background-color:rgb(16, 65, 16);
-    -fx-text-fill:white;
+    -fx-background-color:rgb(216, 216, 216);
+    -fx-text-fill:rgb(30,83,30);
     -fx-border-width:5px;
     -fx-border-radius:50px;
 }
@@ -70,13 +71,13 @@
 }
 #tombolBack{
     -fx-padding:15px 65px 15px 65px;
-    -fx-font-size: 16px;
+    -fx-font-size: 15px;
     -fx-background-radius:23px;
-    -fx-background-color:white;
+    -fx-background-color:rgb(255, 255, 255);
     -fx-text-fill:rgb(84, 207, 84);
     -fx-font-weight:bold;
     -fx-cursor:hand;
-    -fx-translate-y:270px;
+    -fx-translate-y:280px;
 }
 #tombolBack:hover{
     -fx-background-color:rgb(16, 65, 16);
@@ -148,7 +149,7 @@
 }
 #buttonAnjing:hover{
     -fx-background-color:rgb(240, 240, 240);
-    -fx-text-fill:rgb(84, 207, 84);
+    -fx-text-fill:rgb(228, 61, 61);
     -fx-cursor:hand;
 }
 #buttonSapi{
@@ -210,9 +211,9 @@
 }
 #tombolBack2{
     -fx-padding:15px 40px 15px 40px;
-    -fx-font-size: 12px;
+    -fx-font-size: 15px;
     -fx-background-radius:23px;
-    -fx-background-color:white;
+    -fx-background-color:rgb(255, 255, 255);
     -fx-text-fill:rgb(84, 207, 84);
     -fx-font-weight:bold;
     -fx-cursor:hand;
@@ -225,7 +226,7 @@
 }
 #tombolNext{
     -fx-padding:15px 50px 15px 50px;
-    -fx-font-size: 12px;
+    -fx-font-size: 15px;
     -fx-background-radius:23px;
     -fx-background-color:white;
     -fx-text-fill:rgb(84, 207, 84);
@@ -731,4 +732,214 @@
     -fx-background-color:rgb(240, 240, 240);
     -fx-text-fill:rgb(84, 207, 84);
     -fx-cursor:hand;
+}
+#labelScore{
+    /* -fx-background-width:15px 30px 15px 30px; */
+    -fx-font-family:'Berlin Sans FB Demi';
+    -fx-padding:15px 30px 15px 30px;
+    -fx-font-size:25px;
+    -fx-font-weight:bold;
+    -fx-background-color:rgb(17, 68, 17);
+    -fx-background-radius:8px;
+    -fx-text-fill:rgb(236, 236, 236);
+    -fx-translate-y:25px;
+
+}
+#soalQuiz{
+    -fx-font-family:'Berlin Sans FB';
+    -fx-font-size:20px;
+    -fx-padding:5px;
+    -fx-border-width:3px;
+    -fx-translate-y:130px;
+    -fx-border-color:rgb(14, 85, 14);
+    -fx-text-fill:rgb(255, 255, 255);
+}
+#imgQuiz{
+    -fx-translate-y:50px;
+    -fx-text-fill:rgb(223, 223, 223);
+}
+#timerLabel{
+    -fx-font-family:'Berlin Sans FB';
+    -fx-translate-y:40px;
+    -fx-font-size:18px;
+    -fx-background-color:rgb(72, 247, 95);
+    -fx-background-radius:5px;
+    -fx-border-width: 0px 10px 0px 10px;
+    -fx-padding: 0px 10px 0px 10px;
+}
+#optionQuiz{
+    -fx-padding:15px 30px 15px 30px;
+    -fx-font-size: 20px;
+    /* -fx-translate-y:50px; */
+    -fx-background-radius:15px;
+    -fx-background-color:rgb(100, 197, 100);
+    -fx-text-fill:white;
+    -fx-font-weight:500;
+    /* font-weight: ; */
+    -fx-cursor:hand;
+    -fx-font-weight:bold;
+}
+#option1Quiz{
+    -fx-padding:15px 50px 15px 50px;
+    -fx-font-size: 20px;
+    /* -fx-translate-y:50px; */
+    -fx-background-radius:15px;
+    -fx-background-color:rgb(100, 197, 100);
+    -fx-text-fill:white;
+    -fx-font-weight:500;
+    /* font-weight: ; */
+    -fx-cursor:hand;
+    -fx-font-weight:bold;
+}
+#optionQuiz:hover{
+    -fx-background-color:rgb(76, 207, 76);
+    /* -fx-text-fill:white; */
+}
+#nextButtonQuiz{
+    -fx-padding:15px 30px 15px 30px;
+    -fx-font-size: 20px;
+    /* -fx-translate-y:50px; */
+    -fx-background-radius:15px;
+    -fx-background-color:rgb(22, 94, 22);
+    -fx-text-fill:white;
+    -fx-font-weight:500;
+    /* font-weight: ; */
+    -fx-cursor:hand;
+    -fx-font-weight:bold;
+}
+#nextButtonQuiz:hover{
+    -fx-background-color:rgb(228, 228, 228);
+    -fx-text-fill:rgb(22,94,22);
+}
+#textHasilScore{
+    -fx-font-family:'Berlin Sans FB';
+    -fx-font-size:30px;
+    -fx-translate-y:-60px;
+    -fx-background-color:rgb(240, 240, 240);
+    -fx-text-fill:rgb(84, 207, 84);
+    -fx-background-radius:16px;
+    -fx-padding:10px 30px 10px 30px;
+    -fx-font-weight:bold;
+}
+#angkaScore{
+    -fx-font-family:'Berlin Sans FB Demi';
+    -fx-font-size:30px;
+    -fx-border-width:7px;
+    -fx-border-color:rgb(13, 59, 13);
+    -fx-border-radius:10px;
+    -fx-padding:0px 20px 0px 20px;
+    -fx-text-fill:white;
+}
+#komentarScore{
+    -fx-font-family:'Berlin Sans FB Demi';
+    -fx-font-size:30px;
+    -fx-translate-y:35px;
+    -fx-background-color:rgb(104, 250, 104);
+    -fx-background-radius:12px;
+    -fx-padding:8px 30px 8px 30px;
+}
+#homeButtonQuiz{
+    -fx-padding:15px 30px 15px 30px;
+    -fx-font-size: 15px;
+    -fx-background-radius:10px;
+    -fx-background-color:rgb(84, 207, 84);
+    -fx-text-fill:white;
+    -fx-font-weight:bold;
+    -fx-cursor:hand;
+    -fx-translate-y:100px;
+}
+#homeButtonQuiz:hover{
+    -fx-background-color:rgb(240, 240, 240);
+    -fx-text-fill:rgb(84, 207, 84);
+    -fx-cursor:hand;
+}
+#tombolSuaraSingaQuiz{
+    -fx-padding:15px 30px 15px 30px;
+    -fx-font-size: 15px;
+    -fx-background-radius:10px;
+    -fx-background-color:rgb(84, 207, 84);
+    -fx-text-fill:white;
+    -fx-font-weight:bold;
+    -fx-cursor:hand;
+    -fx-translate-y:130px;
+}
+#tombolSuaraSingaQuiz:hover{
+    -fx-background-color:rgb(240, 240, 240);
+    -fx-text-fill:rgb(84, 207, 84);
+    -fx-cursor:hand;
+}
+#vboxQuiz9{
+    -fx-translate-y:310px;
+}
+#hboxQuiz9{
+    -fx-translate-y:270px;
+}
+#soalQuiz9{
+    -fx-font-family:'Berlin Sans FB';
+    -fx-font-size:20px;
+    -fx-padding:5px;
+    -fx-border-width:3px;
+    -fx-translate-y:240px;
+    -fx-border-color:rgb(14, 85, 14);
+    -fx-text-fill:rgb(255, 255, 255);
+}
+#optionQuiz9{
+    -fx-padding:15px 55px 15px 55px;
+    -fx-font-size: 20px;
+    /* -fx-translate-y:50px; */
+    -fx-background-radius:15px;
+    -fx-background-color:rgb(100, 197, 100);
+    -fx-text-fill:white;
+    -fx-font-weight:500;
+    /* font-weight: ; */
+    -fx-cursor:hand;
+    -fx-font-weight:bold;
+}
+#timerLabel9{
+    -fx-font-family:'Berlin Sans FB';
+    -fx-translate-y:160px;
+    -fx-font-size:18px;
+    -fx-background-color:rgb(72, 247, 95);
+    -fx-background-radius:5px;
+    -fx-border-width: 0px 10px 0px 10px;
+    -fx-padding: 0px 10px 0px 10px;
+}
+#tombolSuaraSapiQuiz{
+    -fx-padding:15px 30px 15px 30px;
+    -fx-font-size: 15px;
+    -fx-background-radius:10px;
+    -fx-background-color:rgb(84, 207, 84);
+    -fx-text-fill:white;
+    -fx-font-weight:bold;
+    -fx-cursor:hand;
+    -fx-translate-y:130px;
+}
+#tombolSuaraSapiQuiz:hover{
+    -fx-background-color:rgb(240, 240, 240);
+    -fx-text-fill:rgb(84, 207, 84);
+    -fx-cursor:hand;
+}
+#vboxQuiz10{
+    -fx-translate-y:310px;
+}
+#hboxQuiz10{
+    -fx-translate-y:270px;
+}
+#soalQuiz10{
+    -fx-font-family:'Berlin Sans FB';
+    -fx-font-size:20px;
+    -fx-padding:5px;
+    -fx-border-width:3px;
+    -fx-translate-y:240px;
+    -fx-border-color:rgb(14, 85, 14);
+    -fx-text-fill:rgb(255, 255, 255);
+}
+#timerLabel10{
+    -fx-font-family:'Berlin Sans FB';
+    -fx-translate-y:160px;
+    -fx-font-size:18px;
+    -fx-background-color:rgb(72, 247, 95);
+    -fx-background-radius:5px;
+    -fx-border-width: 0px 10px 0px 10px;
+    -fx-padding: 0px 10px 0px 10px;
 }

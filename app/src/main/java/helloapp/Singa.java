@@ -44,7 +44,6 @@ public class Singa extends Animal{
     public ImageView showImg() {
         showImg = new Image("imgSinga.png");
         imgview = new ImageView(showImg);
-        
         return imgview;
     }
 
@@ -54,6 +53,14 @@ public class Singa extends Animal{
         imgview = new ImageView(showImg);
         
         return imgview;
+    }
+
+    @Override
+    public void suaraQuiz() {
+        path = "sound/suaraSingaQuiz.mp3";
+        media = new Media(new File(path).toURI().toString());
+        mediaplayer = new MediaPlayer(media);
+        mediaplayer.play();
     }
 
 }

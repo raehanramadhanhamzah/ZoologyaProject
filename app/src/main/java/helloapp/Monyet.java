@@ -58,4 +58,10 @@ public class Monyet extends Animal{
         imgView.setFitWidth(300);
         return imgView;
     }
+
+    @Override
+    public void suaraQuiz() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'suaraQuiz'");
+    }
 }

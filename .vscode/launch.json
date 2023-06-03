@@ -4,10 +4,13 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        
-
-
-        
+        {
+            "type": "java",
+            "name": "QuizWithTimer",
+            "request": "launch",
+            "mainClass": "helloapp.QuizWithTimer",
+            "projectName": "app"
+        },
         {
             "type": "java",
             "name": "Current File",

@@ -59,4 +59,12 @@ public class Sapi extends Animal{
         return imgView;
     }
 
+    @Override
+    public void suaraQuiz() {
+        path = "sound/suaraSapiQuiz.mp3";
+        media = new Media(new File(path).toURI().toString());
+        mediaPlayer = new MediaPlayer(media);
+        mediaPlayer.play();
+    }
+
 }
