@@ -78,7 +78,6 @@ public showScene(Stage stage) {
             setPicknumber(listNoQuiz.get(0));
             if(pilihan==1){
                     if(listNoQuiz.contains(1)){
-                        
                         showQuiz1();
                     }else{
                         tampilkanHewanRandom(getPicknumber());
@@ -86,21 +85,18 @@ public showScene(Stage stage) {
         
             }else if(pilihan==2){
                 if(listNoQuiz.contains(2)){
-                    
                     showQuiz2();
                 }else{
                     tampilkanHewanRandom(getPicknumber());
                 }
             }else if(pilihan==3){
                 if(listNoQuiz.contains(3)){
-                    
                     showQuiz3();
                 }else{
                     tampilkanHewanRandom(getPicknumber());
                 }
             }else if(pilihan==4){
                 if(listNoQuiz.contains(4)){
-                    
                     showQuiz4();
                 }else{
                     tampilkanHewanRandom(getPicknumber());
